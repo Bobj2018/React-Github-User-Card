@@ -8,16 +8,14 @@ class FollowerList extends React.Component {
 		this.state = {};
 	}
 
-	componentDidMount() {
-		console.log(this.props);
-	}
 	render() {
+		// console.log(this.props);
 		return (
-			<>
+			<div className='follower-list'>
 				{this.props.followers.map(item => {
-					return <FollowerCard follower={item} key={item.id} />;
+					return <FollowerCard user={item} key={item.id} />;
 				})}
-			</>
+			</div>
 		);
 	}
 }

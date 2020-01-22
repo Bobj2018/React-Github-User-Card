@@ -6,17 +6,16 @@ class UserCard extends React.Component {
 		this.state = {};
 	}
 
-	componentDidMount() {
-		console.log(props);
-	}
-
 	render() {
 		return (
 			<div>
-				<h2></h2>
+				<img src={`${this.props.avatar_url}.jpg`} alt='' />
+				<h2>{this.props.name}</h2>
+				<h1>{this.props.login}</h1>
+				{/* {this.props.followers} */}
 			</div>
 		);
 	}
 }
 
-export default UerCard;
+export default UserCard;

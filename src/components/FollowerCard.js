@@ -5,14 +5,15 @@ class FollowerCard extends React.Component {
 		super(props);
 		this.state = {};
 	}
-	componentDidMount() {
-		console.log(this.props.follower);
-	}
+	componentDidMount() {}
 	render() {
 		return (
-			<div>
-				<img src={`${this.props.follower.avatar_url}.jpg`} />
-				<h2>{this.props.follower.login}</h2>
+			<div className='follower-card'>
+				<img
+					className='follower-img'
+					src={`${this.props.user.avatar_url}.jpg`}
+				/>
+				<h2>{this.props.user.login}</h2>
 			</div>
 		);
 	}
